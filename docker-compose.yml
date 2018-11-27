@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+
+  pandoc:
+    build: ./pandoc
+    container_name: pandoc
+    environment:
+     - loglevel=none
+    volumes:
+     - "./pandoc/workspace:/home/pandoc/workspace"
+    working_dir: "/home/pandoc/workspace"
